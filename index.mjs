@@ -20,9 +20,15 @@ app.get('/', async (req, res) => {
 
 app.get('/planet', (req, res) => {
     let planetName = req.query.planetName;
+    
     let planetInfo = solarSystem['get' + planetName]();
     console.log(planetInfo);
    res.render('planetInfo.ejs', {planetInfo, planetName})
+});
+
+
+app.get('/NASAPOD', async (req, res) => {
+   res.render('NASAPOD.ejs')
 });
 
 
