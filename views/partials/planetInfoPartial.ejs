@@ -1,12 +1,12 @@
-<h2>
-    <%=planetName%>
-</h2>
-Description: <%=planetInfo.description%><br>
-    <%=planetInfo.def%><br>
-        <%=planetInfo.distanceFromSun%><br>
-            <%=planetInfo.yearLength%><br>
-                <%=planetInfo.websiteLink%><br>
-                    <%=planetInfo.oneEarthDay%><br>
-                        <%=planetInfo.moons%><br>
-                            <br>
-                            <img src="<%=planetInfo.image%>" width="300" />
+<div class="planet">
+  <div class="planet-text">
+    <h2><%= planetName %></h2>
+    <p><%= planetInfo.description %></p>
+    <p><%= planetInfo.distanceFromSun %></p>
+    <p><%= planetInfo.yearLength %></p>
+  </div>
+
+  <div class="planet-image">
+    <img src="<%= planetInfo.image %>" alt="<%= planetName %>">
+  </div>
+</div>
